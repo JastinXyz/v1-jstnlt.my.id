@@ -6,17 +6,17 @@ import { FaGithub } from "react-icons/fa";
 export default function About() {
   let umur = sAge("Nov 16 2007");
   let [gh, setGh] = useState('Fetching...')
-  // useEffect(() => {
-  //   (async() => {
-  //     try {
-  //       const res = await fetch("https://api.github.com/users/JastinXyz");
-  //       const data = await res.json();
-  //       setGh(data);
-  //     } catch {
-  //       setGh({ public_repos: "several" })
-  //     }
-  //   })()
-  // }, [])
+  useEffect(() => {
+    (async() => {
+      try {
+        const res = await fetch("https://api.github.com/users/JastinXyz");
+        const data = await res.json();
+        setGh(data);
+      } catch {
+        setGh({ public_repos: "several" })
+      }
+    })()
+  }, [])
 
   return (
     <>
