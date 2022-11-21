@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "daisyui": "^2.39.1",
+    "lru-cache": "^7.14.1",
+    "next": "13.0.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-dom-confetti": "^0.2.0",
+    "react-hot-toast": "^2.4.0",
+    "react-icons": "^4.6.0",
+    "react-typed": "^1.2.0",
+    "s-age": "^1.1.2",
+    "webhook-discord": "^3.7.8"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.19",
+    "tailwindcss": "^3.2.4"
+  }
+}
