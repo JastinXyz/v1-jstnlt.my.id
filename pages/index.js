@@ -16,11 +16,11 @@ export default function Home() {
       <BackToTop />
       <svg width="0" height="0">
         <linearGradient id="instagram-gradient" x2="0.35" y2="1">
-          <stop offset="0%" stop-color="#f09433" />
-          <stop offset="25%" stop-color="#e6683c" />
-          <stop offset="50%" stop-color="#dc2743" />
-          <stop offset="75%" stop-color="#cc2366" />
-          <stop offset="100%" stop-color="#bc1888" />
+          <stop offset="0%" stopColor="#f09433" />
+          <stop offset="25%" stopColor="#e6683c" />
+          <stop offset="50%" stopColor="#dc2743" />
+          <stop offset="75%" stopColor="#cc2366" />
+          <stop offset="100%" stopColor="#bc1888" />
         </linearGradient>
       </svg>
       <div className="w-full pb-12 antialiased">

@@ -22,7 +22,7 @@ export default function Main() {
                   data-aos="fade-right"
                   data-aos-duration="1000"
                 >
-                  Hi <span className="animate-wave inline-block">👋🏼</span>, I'm
+                  Hi <span className="animate-wave inline-block">👋🏼</span>, I&apos;m
                   Jastin Linggar T.
                 </span>
               </h1>

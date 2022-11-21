@@ -1,7 +1,6 @@
 import Image from "next/image";
 import sAge from "s-age";
 import { useState, useEffect } from "react";
-import { FaGithub } from "react-icons/fa";
 
 export default function About() {
   let umur = sAge("Nov 16 2007");
@@ -76,8 +75,8 @@ export default function About() {
               <p className="mt-5">
                 A Little Story, In the past, I preferred to learn about Back End
                 but when I got to know Front End frameworks like NextJs, I think
-                now I prefer to learn about Front End. But I'm also learning New
-                Things about Back End in PHP now. I don't know, I'm a person who
+                now I prefer to learn about Front End. But I&apos;m also learning New
+                Things about Back End in PHP now. I don&apos;t know, I&apos;m a person who
                 likes to learn new things but rarely takes it seriously.
               </p>
               <p className="mt-5">
