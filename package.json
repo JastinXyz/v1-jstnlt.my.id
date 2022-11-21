@@ -20,6 +20,7 @@
     "react-icons": "^4.6.0",
     "react-typed": "^1.2.0",
     "s-age": "^1.1.2",
+    "sharp": "^0.31.2",
     "webhook-discord": "^3.7.8"
   },
   "devDependencies": {
