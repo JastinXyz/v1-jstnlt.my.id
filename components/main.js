@@ -41,7 +41,7 @@ export default function Main() {
                   loop
                 />
               </p>
-              <div className="social-network flex gap-7 text-2xl text-gray-500 mt-2 text-center md:text-left">
+              <div className="social-network flex space-x-7 text-2xl text-gray-500 mt-2 text-center md:text-left">
                 <a href="/github" target="_blank" rel="noopener noreferrer">
                   <FaGithub className="hover:fill-black transition delay-150" />
                 </a>

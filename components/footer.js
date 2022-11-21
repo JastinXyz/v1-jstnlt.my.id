@@ -26,7 +26,7 @@ export default function Footer() {
         </div>
         <div>
           <span className="footer-title ml-2">Social</span>
-          <div className="social-network flex md:gap-6 gap-4 text-2xl text-gray-500 ml-2">
+          <div className="social-network flex md:space-x-6 space-x-4 text-2xl text-gray-500 ml-2">
             <a href="/github" target="_blank" rel="noopener noreferrer">
               <FaGithub className="hover:fill-black transition delay-150" />
             </a>
