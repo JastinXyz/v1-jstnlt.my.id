@@ -30,9 +30,9 @@ export default function Main() {
               <p
                 data-aos="fade-right"
                 data-aos-duration="1000"
-                className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 to-indigo-500 md:inline-block md:mt-0 mt-2"
+                className="md:text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 to-indigo-500 md:inline-block md:mt-0 mt-2"
               >
-                {`Someone who interested in `}
+                {`Someone who likes to `}
                 <Typed
                   strings={["coding", "sleeping", "gaming"]}
                   typeSpeed={79}
