@@ -1,5 +1,5 @@
 import Image from "next/legacy/image";
-import { FaHtml5, FaNodeJs, FaAngleRight, FaGithub } from "react-icons/fa";
+import { FaHtml5, FaNodeJs, FaAngleRight, FaGithub, FaLaravel } from "react-icons/fa";
 
 export default function Projects() {
     return (
@@ -22,7 +22,37 @@ export default function Projects() {
             <div className="grid grid-cols-1 md:grid-cols-2 mt-20 gap-4">
               <div className="flex justify-center">
                 <a
-                  className="hover:scale-110 hover:rotate-6 transition delay-75"
+                  className="group hover:scale-110 hover:rotate-6 transition delay-75"
+                  href="https://github.com/JastinXyz/data-siswa/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    className="card max-w-md bg-base-100 shadow-xl image-full"
+                    data-aos="fade-up"
+                  >
+                    <figure>
+                      <Image
+                        src="/img/projects/siswa-crud.webp"
+                        alt="Siswa CRUD"
+                        layout="fill"
+                      />
+                    </figure>
+                    <div className="card-body">
+                      <h2 className="card-title">
+                        <FaLaravel className="group-hover:fill-[#FF2D20] transition ease-in-out delay-150" />
+                        {` Data Siswa`}
+                      </h2>
+                      <p>{`Sebuah project Laravel pertama saya yang menerapkan sistem CRUD di dalamnya.`}</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div></div>
+              <div></div>
+              <div className="flex justify-center">
+                <a
+                  className="group hover:scale-110 hover:-rotate-6 transition delay-75"
                   href="https://github.com/JastinXyz/discord-bot-landing-page-web/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -41,7 +71,8 @@ export default function Projects() {
                     </figure>
                     <div className="card-body">
                       <h2 className="card-title">
-                        <FaHtml5 /> Discord Bot Landing Page Template
+                        <FaHtml5 className="group-hover:fill-[#E96228] transition ease-in-out delay-150" />{" "}
+                        Discord Bot Landing Page Template
                       </h2>
                       <p>{`A landing page source code for the Discord bot (but you can use it for any kind of landing page)`}</p>
                     </div>
@@ -52,7 +83,7 @@ export default function Projects() {
               <div></div>
               <div className="flex justify-center">
                 <a
-                  className="hover:scale-110 hover:-rotate-6 transition delay-75"
+                  className="group hover:scale-110 hover:rotate-6 transition delay-75"
                   href="https://github.com/JastinXyz/simple-rps/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -70,7 +101,7 @@ export default function Projects() {
                     </figure>
                     <div className="card-body">
                       <h2 className="card-title">
-                        <FaHtml5 />
+                        <FaHtml5 className="group-hover:fill-[#E96228] transition ease-in-out delay-150" />
                         {` Simple RPS`}
                       </h2>
                       <p>{`A website-based Rock Paper Scissors game with a simple design.`}</p>
@@ -78,9 +109,11 @@ export default function Projects() {
                   </div>
                 </a>
               </div>
+              <div></div>
+              <div></div>
               <div className="flex justify-center">
                 <a
-                  className="hover:scale-110 hover:rotate-6 transition delay-75"
+                  className="group hover:scale-110 hover:-rotate-6 transition delay-75"
                   href="https://github.com/JastinXyz/whatscode.js"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -98,7 +131,7 @@ export default function Projects() {
                     </figure>
                     <div className="card-body">
                       <h2 className="card-title">
-                        <FaNodeJs />
+                        <FaNodeJs className="group-hover:fill-[#689F63] transition ease-in-out delay-150" />
                         {` Whatscode.js`}
                       </h2>
                       <p>
@@ -117,7 +150,7 @@ export default function Projects() {
               <div></div>
               <div className="flex justify-center">
                 <a
-                  className="hover:scale-110 hover:-rotate-6 transition delay-75"
+                  className="group hover:scale-110 hover:rotate-6 transition delay-75"
                   href="https://github.com/JastinXyz/gempa-bot/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -136,7 +169,7 @@ export default function Projects() {
                     </figure>
                     <div className="card-body">
                       <h2 className="card-title">
-                        <FaNodeJs />
+                        <FaNodeJs className="group-hover:fill-[#689F63] transition ease-in-out delay-150" />
                         Gempa Bot
                       </h2>
                       <p>{`A Discord Bot to detect the latest earthquake in Indonesia.`}</p>
