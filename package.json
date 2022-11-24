@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/analytics": "^0.1.5",
     "aos": "^2.3.4",
     "daisyui": "^2.39.1",
     "lru-cache": "^7.14.1",
