@@ -1,7 +1,6 @@
 import { InView } from 'react-intersection-observer';
 
 export default function Waypoints({target, children}) {
-  console.log(target)
     return (
       <>
         <InView
