@@ -7,7 +7,7 @@ import Logo from "./dust/logo";
 
 export default function Navbar() {
     const [open, setOpen] = useState({
-        class: "top-0 left-0 items-start hidden w-full h-full p-4 text-sm bg-gray-900 bg-opacity-50 md:items-center md:w-3/4 md:absolute lg:text-base md:bg-transparent md:p-0 md:relative md:flex",
+        class: "hidden top-0 left-0 items-start w-full h-full p-4 text-sm bg-gray-900 bg-opacity-50 md:items-center md:w-3/4 md:absolute lg:text-base md:bg-transparent md:p-0 md:relative md:flex",
         state: false
     });
 
@@ -149,47 +149,51 @@ export default function Navbar() {
                 <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
               </svg>
             </label>
-            <div
-              onClick={() => {
-                open.state
-                  ? setOpen({
-                      class: open.class.replace("flex fixed", "hidden"),
-                      state: false,
-                    })
-                  : setOpen({
-                      class: open.class.replace("hidden", "flex fixed"),
-                      state: true,
-                    });
-              }}
-              className="absolute right-0 flex flex-col items-center items-end justify-center w-10 h-10 bg-white rounded-full cursor-pointer md:hidden hover:bg-gray-100"
-            >
-              <svg
-                className={open.state ? "hidden" : "w-6 h-6 text-black"}
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                x-cloak=""
-              >
-                <path d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-              <svg
-                className={open.state ? "w-6 h-6 text-black" : "hidden"}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                x-cloak=""
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                ></path>
-              </svg>
+            <div className="group hover:bg-base-200 dark:hover:bg-neutral transition delay-100 absolute right-0 flex flex-col items-center items-end justify-center w-10 h-10 rounded-full cursor-pointer md:hidden">
+              <label className="swap swap-rotate ">
+                <input
+                  type={"checkbox"}
+                  onChange={() => {
+                    open.state
+                      ? setOpen({
+                          class: open.class.replace("flex fixed", "hidden"),
+                          state: false,
+                        })
+                      : setOpen({
+                          class: open.class.replace("hidden", "flex fixed"),
+                          state: true,
+                        });
+                  }}
+                />
+                <svg
+                  class="w-6 h-6 swap-off fill-current"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  x-cloak=""
+                >
+                  <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+
+                <svg
+                  class="w-6 h-6 swap-on fill-current"
+                  fill="white"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  x-cloak=""
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </label>
             </div>
           </div>
         </nav>
