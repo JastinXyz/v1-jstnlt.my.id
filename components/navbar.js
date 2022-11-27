@@ -38,35 +38,6 @@ export default function Navbar() {
       document.querySelector("html").setAttribute("data-theme", theme);
       setDark(theme === "dracula");
     }, []);
-    
-    // let where = {
-    //   "#": 0,
-    //   "#about": 1058,
-    //   "#projects": 2266,
-    //   "#contact": 3284
-    // }
-
-    const [active, setActive] = useState();
-    // useEffect(() => {
-    //   window.addEventListener("scroll", activeControl);
-    //   console.log(active)
-    //   return () => {
-    //     window.removeEventListener("scroll", activeControl);
-    //   };
-    // });
-
-    // const activeControl = () => {
-    //   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    //   if(winScroll <= where['#about']) {
-    //     setActive("#")
-    //   } else if(winScroll <= where["#projects"]) {
-    //     setActive("#about")
-    //   } else if(winScroll <= where["#contact"]) {
-    //     setActive("#projects")
-    //   } else if(winScroll <= 100) {
-    //     setActive("#contact")
-    //   }
-    // };
 
     return (
       <>
@@ -86,36 +57,32 @@ export default function Navbar() {
                 <div className="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-8 md:w-2/3 md:mt-0 md:flex-row md:items-center">
                   <a
                     href="#"
-                    className={`${
-                      active === "#" ? "text-indigo-500" : ""
-                    } "transition delay-100 inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-base-700 hover:text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center"`}
+                    id="tohome"
+                    className="text-indigo-600 transition delay-100 inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-base-700 hover:text-indigo-700 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center"
                   >
                     <IoMdHome className="inline w-5 h-5 md:w-auto md:h-auto" />{" "}
                     Home
                   </a>
                   <a
                     href="#about"
-                    className={`${
-                      active === "#about" ? "text-indigo-500" : ""
-                    } "transition delay-100 inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-base-700 hover:text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center"`}
+                    id="toabout"
+                    className="transition delay-100 inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-base-700 hover:text-indigo-700 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center"
                   >
                     <IoMdPerson className="inline w-5 h-5 md:w-auto md:h-auto" />{" "}
                     About
                   </a>
                   <a
                     href="#projects"
-                    className={`${
-                      active === "#projects" ? "text-indigo-500" : ""
-                    } "transition delay-100 inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-base-700 hover:text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center"`}
+                    id="toprojects"
+                    className="transition delay-100 inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-base-700 hover:text-indigo-700 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center"
                   >
                     <MdCode className="inline w-5 h-5 md:w-auto md:h-auto" />{" "}
                     Projects
                   </a>
                   <a
                     href="#contact"
-                    className={`${
-                      active === "#contact" ? "text-indigo-500" : ""
-                    } "transition delay-100 inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-base-700 hover:text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center"`}
+                    id="tocontact"
+                    className="transition delay-100 inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-base-700 hover:text-indigo-700 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center"
                   >
                     <IoIosPaperPlane className="inline w-5 h-5 md:w-auto md:h-auto" />{" "}
                     Contact
@@ -124,9 +91,9 @@ export default function Navbar() {
                 <div className="flex flex-col items-start justify-end w-full pt-4 md:items-center md:w-1/3 md:flex-row md:py-0">
                   <a
                     href="/github"
-                    className="w-full px-6 py-2 mb-2 md:mb-0 mr-0 text-base-700 md:px-0 lg:pl-2 md:mr-4 lg:mr-5 md:w-auto"
+                    className="group w-full px-6 py-2 mb-2 md:mb-0 mr-0 text-base-700 md:px-0 lg:pl-2 md:mr-4 lg:mr-5 md:w-auto"
                   >
-                    <FaGithub className="w-6 h-6 inline md:mr-0 mr-2" />
+                    <FaGithub className="w-6 h-6 inline md:mr-0 mr-2 group-hover:text-gray-600 transition ease-in-out delay-100 duration-100" />
                     <span className="md:hidden">Github</span>
                   </a>
                   <label className="swap swap-rotate hidden md:grid">

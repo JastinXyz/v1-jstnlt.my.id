@@ -1,10 +1,11 @@
 import Image from "next/image";
 import sAge from "s-age";
 import { useState, useEffect } from "react";
+import Waypoints from "../dust/waypoints";
 
 export default function About() {
   let umur = sAge("Nov 16 2007");
-  let [gh, setGh] = useState('Fetching...')
+  let [gh, setGh] = useState('Fetching...');
   useEffect(() => {
     (async() => {
       try {
@@ -32,65 +33,67 @@ export default function About() {
         ></path>
       </svg>
       <div className="bg-[#e3f2fd] px-6">
-        <section id="about" className="text-black py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="flex justify-center md:mb-0 mb-20 py-5">
-              <Image
-                className="z-50"
-                src="/img/about.svg"
-                alt="about me"
-                width={200}
-                height={200}
-                data-aos="fade-up-right"
-              />
-              <Image
-                src="/img/blob/2.svg"
-                className="mt-5 md:mt-20 absolute"
-                alt="blob"
-                width={350}
-                height={350}
-                data-aos="fade-up-right"
-                data-aos-duration="1500"
-              />
-            </div>
-            <div className="ml-10 mr-10 pt-10">
-              <h1 className="text-3xl font-bold leading-9" data-aos="fade-up">
-                About Me
-              </h1>
-              <div
-                className="bg-[#6C63FF] w-[150px] h-[5px]"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              ></div>
-              <p className="mt-2">
-                {`I live in Purwokerto, Indonesia. My full name is Jastin
+        <Waypoints target={'toabout'}>
+          <section id="about" className="text-black py-20">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              <div className="flex justify-center md:mb-0 mb-20 py-5">
+                <Image
+                  className="z-50"
+                  src="/img/about.svg"
+                  alt="about me"
+                  width={200}
+                  height={200}
+                  data-aos="fade-up-right"
+                />
+                <Image
+                  src="/img/blob/2.svg"
+                  className="mt-5 md:mt-20 absolute"
+                  alt="blob"
+                  width={350}
+                  height={350}
+                  data-aos="fade-up-right"
+                  data-aos-duration="1500"
+                />
+              </div>
+              <div className="ml-10 mr-10 pt-10">
+                <h1 className="text-3xl font-bold leading-9" data-aos="fade-up">
+                  About Me
+                </h1>
+                <div
+                  className="bg-[#6C63FF] w-[150px] h-[5px]"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                ></div>
+                <p className="mt-2">
+                  {`I live in Purwokerto, Indonesia. My full name is Jastin
                   Linggar Tama, just call me Jastin. I'm ${umur} years old. A Software
                   Engineering student, I have known Programming since 2020 and
                   am quite familiar with HTML, CSS, Javascript and several other
                   languages ​​& frameworks.`}
-              </p>
-              <p className="mt-5">
-                A Little Story, In the past, I preferred to learn about Back End
-                but when I got to know Front End frameworks like NextJs, I think
-                now I prefer to learn about Front End. But I&apos;m also
-                learning New Things about Back End in PHP now. I don&apos;t
-                know, I&apos;m a person who likes to learn new things but rarely
-                takes it seriously.
-              </p>
-              <p className="mt-5">
-                One more thing, I have created{" "}
-                <span className="font-bold">{gh.public_repos}</span> public
-                repository on my Github. Various repositories such as templates
-                or even just a package to make things easier. There are several
-                serious projects but now they are rarely developed due to
-                conflicts with school work.
-              </p>
-              {/* <div class="tooltip tooltip-open tooltip-right mt-5" data-tip={`${gh.followers} Followers, ${gh.following} Following`}>
+                </p>
+                <p className="mt-5">
+                  A Little Story, In the past, I preferred to learn about Back
+                  End but when I got to know Front End frameworks like NextJs, I
+                  think now I prefer to learn about Front End. But I&apos;m also
+                  learning New Things about Back End in PHP now. I don&apos;t
+                  know, I&apos;m a person who likes to learn new things but
+                  rarely takes it seriously.
+                </p>
+                <p className="mt-5">
+                  One more thing, I have created{" "}
+                  <span className="font-bold">{gh.public_repos}</span> public
+                  repository on my Github. Various repositories such as
+                  templates or even just a package to make things easier. There
+                  are several serious projects but now they are rarely developed
+                  due to conflicts with school work.
+                </p>
+                {/* <div class="tooltip tooltip-open tooltip-right mt-5" data-tip={`${gh.followers} Followers, ${gh.following} Following`}>
                 <button class="btn"><FaGithub className="mr-2 w-5 h-5" /> Github</button>
               </div> */}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </Waypoints>
       </div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
