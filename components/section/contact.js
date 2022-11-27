@@ -67,8 +67,8 @@ export default function Contact() {
             d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
           ></path>
         </svg>
-        <div className="px-6 pt-28" style={{ backgroundColor: "#e3f2fd" }}>
-          <section id="contact">
+        <div className="px-6" style={{ backgroundColor: "#e3f2fd" }}>
+          <section id="contact" className="pt-28">
             <h1
               className="text-2xl font-bold text-center text-gray-900"
               data-aos="fade-up"
@@ -97,7 +97,7 @@ export default function Contact() {
                       data-aos-duration="1000"
                     ></div>
 
-                    <ul className="list-disc ml-5">
+                    <ul className="list-disc ml-5 mt-1">
                       <li>{`jstnlt#0255`}</li>
                     </ul>
                   </div>
@@ -116,7 +116,7 @@ export default function Contact() {
                       data-aos-duration="1000"
                     ></div>
 
-                    <ul className="list-disc ml-5">
+                    <ul className="list-disc ml-5 mt-1">
                       <li>
                         <a
                           href="mailto:jastinlinggar@gmail.com"

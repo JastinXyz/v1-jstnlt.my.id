@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
+import { MdCode } from "react-icons/md";
+import { IoIosPaperPlane, IoMdHome, IoMdPerson } from "react-icons/io";
+import Logo from "./dust/logo";
 
 export default function Navbar() {
     const [open, setOpen] = useState({
@@ -35,18 +38,42 @@ export default function Navbar() {
       document.querySelector("html").setAttribute("data-theme", theme);
       setDark(theme === "dracula");
     }, []);
+    
+    // let where = {
+    //   "#": 0,
+    //   "#about": 1058,
+    //   "#projects": 2266,
+    //   "#contact": 3284
+    // }
+
+    const [active, setActive] = useState();
+    // useEffect(() => {
+    //   window.addEventListener("scroll", activeControl);
+    //   console.log(active)
+    //   return () => {
+    //     window.removeEventListener("scroll", activeControl);
+    //   };
+    // });
+
+    // const activeControl = () => {
+    //   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    //   if(winScroll <= where['#about']) {
+    //     setActive("#")
+    //   } else if(winScroll <= where["#projects"]) {
+    //     setActive("#about")
+    //   } else if(winScroll <= where["#contact"]) {
+    //     setActive("#projects")
+    //   } else if(winScroll <= 100) {
+    //     setActive("#contact")
+    //   }
+    // };
 
     return (
       <>
-        <nav className="navbar relative z-50 h-24 select-none px-6">
+        <nav className="navbar bg-base-100 fixed z-[999] h-24 select-none px-6">
           <div className="container relative flex flex-wrap items-center justify-between h-24 mx-auto overflow-hidden font-medium border-b border-gray-200 md:overflow-visible lg:justify-center sm:px-4 md:px-2">
             <div className="flex items-center justify-start w-1/4 h-full pr-4">
-              <Link href="/" className="flex gap-1 inline-block py-4 md:py-0">
-                <span className="p-1 text-xl font-black leading-none text-base-900">
-                  <span>JstnLT</span>
-                  <span className="text-indigo-600">.</span>
-                </span>
-              </Link>
+              <Logo />
             </div>
             <div className={open.class}>
               <div className="flex-col w-full h-auto overflow-hidden bg-base-100 rounded-lg md:bg-transparent md:overflow-visible md:rounded-none md:relative md:flex md:flex-row">
@@ -59,26 +86,38 @@ export default function Navbar() {
                 <div className="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-8 md:w-2/3 md:mt-0 md:flex-row md:items-center">
                   <a
                     href="#"
-                    className="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-base-700 hover:text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center"
+                    className={`${
+                      active === "#" ? "text-indigo-500" : ""
+                    } "transition delay-100 inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-base-700 hover:text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center"`}
                   >
+                    <IoMdHome className="inline w-5 h-5 md:w-auto md:h-auto" />{" "}
                     Home
                   </a>
                   <a
                     href="#about"
-                    className="inline-block w-full py-2 mx-0 font-medium text-left text-base-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center"
+                    className={`${
+                      active === "#about" ? "text-indigo-500" : ""
+                    } "transition delay-100 inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-base-700 hover:text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center"`}
                   >
+                    <IoMdPerson className="inline w-5 h-5 md:w-auto md:h-auto" />{" "}
                     About
                   </a>
                   <a
                     href="#projects"
-                    className="inline-block w-full py-2 mx-0 font-medium text-left text-base-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center"
+                    className={`${
+                      active === "#projects" ? "text-indigo-500" : ""
+                    } "transition delay-100 inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-base-700 hover:text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center"`}
                   >
+                    <MdCode className="inline w-5 h-5 md:w-auto md:h-auto" />{" "}
                     Projects
                   </a>
                   <a
                     href="#contact"
-                    className="inline-block w-full py-2 mx-0 font-medium text-left text-base-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center"
+                    className={`${
+                      active === "#contact" ? "text-indigo-500" : ""
+                    } "transition delay-100 inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-base-700 hover:text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center"`}
                   >
+                    <IoIosPaperPlane className="inline w-5 h-5 md:w-auto md:h-auto" />{" "}
                     Contact
                   </a>
                 </div>

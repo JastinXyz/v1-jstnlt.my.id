@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Typed from "react-typed";
-import { FaGithub, FaYoutube, FaInstagram, FaNpm, FaFacebook, FaUserAlt } from "react-icons/fa";
+import { FaUserAlt } from "react-icons/fa";
 import { MdCode } from 'react-icons/md'
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import About from "./section/about";
 import Projects from "./section/projects";
 import Contact from "./section/contact";
 import { Toaster } from "react-hot-toast";
+import Social from "./dust/social";
 
 export default function Main() {
     return (
@@ -15,15 +16,15 @@ export default function Main() {
         {/* Header Starts */}
         <div className="px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 px-4">
-            <div className="pt-28">
+            <div className="pt-52">
               <h1 className="text-4xl font-extrabold leading-10 tracking-tight text-left text-base-900 sm:leading-none md:text-3xl lg:text-4xl">
                 <span
                   className="inline md:block"
                   data-aos="fade-right"
                   data-aos-duration="1000"
                 >
-                  Hi <span className="animate-wave inline-block">👋🏼</span>, I&apos;m
-                  Jastin Linggar T.
+                  Hi <span className="animate-wave inline-block">👋🏼</span>,
+                  I&apos;m Jastin Linggar T.
                 </span>
               </h1>
 
@@ -41,23 +42,7 @@ export default function Main() {
                   loop
                 />
               </p>
-              <div className="social-network flex space-x-7 text-2xl text-gray-500 mt-2 text-center md:text-left">
-                <a href="/github" target="_blank" rel="noopener noreferrer">
-                  <FaGithub className="hover:fill-black transition delay-150" />
-                </a>
-                <a href="/facebook" target="_blank" rel="noopener noreferrer">
-                  <FaFacebook className="hover:fill-brand-fb transition delay-150" />
-                </a>
-                <a href="/youtube" target="_blank" rel="noopener noreferrer">
-                  <FaYoutube className="hover:fill-red-500 transition delay-150" />
-                </a>
-                <a href="/instagram" target="_blank" rel="noopener noreferrer">
-                  <FaInstagram className="hover:fill-[url(#instagram-gradient)] transition delay-150" />
-                </a>
-                <a href="/npm" target="_blank" rel="noopener noreferrer">
-                  <FaNpm className="hover:fill-red-500 transition delay-150" />
-                </a>
-              </div>
+              <Social type={'hero'} />
 
               <div className="mt-5 text-center md:text-left makeGapR1">
                 <a
@@ -77,7 +62,7 @@ export default function Main() {
               </div>
             </div>
 
-            <div className="flex justify-center md:pt-20 pt-5 md:mx-0 mx-5">
+            <div className="flex justify-center md:pt-44 pt-5 md:mx-0 mx-5">
               <Image
                 src="/img/peep.svg"
                 alt="hero image"
@@ -99,7 +84,7 @@ export default function Main() {
             </div>
           </div>
 
-          <div className="animate-sb pt-28 flex justify-center">
+          <div className="animate-sb pt-36 flex justify-center">
             <a href="#about">
               <IoIosArrowDropdownCircle className="scale-[120%] hover:scale-[150%] transition delay-150" />
             </a>

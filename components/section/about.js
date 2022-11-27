@@ -32,7 +32,7 @@ export default function About() {
         ></path>
       </svg>
       <div className="bg-[#e3f2fd] px-6">
-        <section id="about" className="text-black">
+        <section id="about" className="text-black py-20">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="flex justify-center md:mb-0 mb-20 py-5">
               <Image
@@ -54,10 +54,7 @@ export default function About() {
               />
             </div>
             <div className="ml-10 mr-10 pt-10">
-              <h1
-                className="text-3xl font-bold leading-9"
-                data-aos="fade-up"
-              >
+              <h1 className="text-3xl font-bold leading-9" data-aos="fade-up">
                 About Me
               </h1>
               <div
@@ -75,9 +72,10 @@ export default function About() {
               <p className="mt-5">
                 A Little Story, In the past, I preferred to learn about Back End
                 but when I got to know Front End frameworks like NextJs, I think
-                now I prefer to learn about Front End. But I&apos;m also learning New
-                Things about Back End in PHP now. I don&apos;t know, I&apos;m a person who
-                likes to learn new things but rarely takes it seriously.
+                now I prefer to learn about Front End. But I&apos;m also
+                learning New Things about Back End in PHP now. I don&apos;t
+                know, I&apos;m a person who likes to learn new things but rarely
+                takes it seriously.
               </p>
               <p className="mt-5">
                 One more thing, I have created{" "}
